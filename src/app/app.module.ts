@@ -5,11 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserinfoComponent } from './userinfo/userinfo.component';
+import { XemdanhsachdonviComponent } from './xemdanhsachdonvi/xemdanhsachdonvi.component';
+import { ThemdonviComponent } from './themdonvi/themdonvi.component';
+import { SuadonviComponent } from './suadonvi/suadonvi.component';
+import { XemnhanvienComponent } from './xemnhanvien/xemnhanvien.component';
+import { ThemnhanvienComponent } from './themnhanvien/themnhanvien.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    UserinfoComponent,
+    XemdanhsachdonviComponent,
+    ThemdonviComponent,
+    SuadonviComponent,
+    XemnhanvienComponent,
+    ThemnhanvienComponent
   ],
   imports: [
     BrowserModule,
