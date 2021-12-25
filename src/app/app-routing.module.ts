@@ -1,3 +1,4 @@
+import { ListuserComponent } from './listuser/listuser.component';
 import { ThemnhanvienComponent } from './themnhanvien/themnhanvien.component';
 import { XemnhanvienComponent } from './xemnhanvien/xemnhanvien.component';
 import { ThemdonviComponent } from './themdonvi/themdonvi.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
 	{ path: 'login', component: LoginComponent },
   { path: '', component: LoginComponent},
   {path:'user/info', component: UserinfoComponent},
+  {path:'user/list', component: ListuserComponent},
   {path:'admin/listunit',component: XemdanhsachdonviComponent},
   {path:'admin/editunit',component: SuadonviComponent},
   {path:'admin/addunit',component: ThemdonviComponent},

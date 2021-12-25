@@ -1,3 +1,4 @@
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,6 +12,14 @@ import { ThemdonviComponent } from './themdonvi/themdonvi.component';
 import { SuadonviComponent } from './suadonvi/suadonvi.component';
 import { XemnhanvienComponent } from './xemnhanvien/xemnhanvien.component';
 import { ThemnhanvienComponent } from './themnhanvien/themnhanvien.component';
+import { ListuserComponent, MemberListuserComponent } from './listuser/listuser.component';
+import {MatButtonModule} from '@angular/material/button';
+import { MatCommonModule } from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+//import { MatLabelModule } from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -21,12 +30,20 @@ import { ThemnhanvienComponent } from './themnhanvien/themnhanvien.component';
     ThemdonviComponent,
     SuadonviComponent,
     XemnhanvienComponent,
-    ThemnhanvienComponent
+    ThemnhanvienComponent,
+    ListuserComponent,
+    MemberListuserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatCommonModule,
+    MatButtonModule,
+    MatCardModule,
+    MatGridListModule,
+    MatDialogModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

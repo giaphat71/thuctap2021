@@ -16,13 +16,19 @@ export class LoginComponent implements OnInit {
     var pass = (document.getElementById("password")  as HTMLInputElement)?.value;
     var ghinho = (document.getElementById("ghinho")  as HTMLInputElement)?.checked;
     console.log(acc+pass);
+    //location.href = "/user/info";
     fetch(`${this.backend}/api/login`, {
       method : "POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({account: acc, pass:pass, ghinho:ghinho})
-    }).then(r=>r.json())
-    .then(rs=>rs.code == "0").then(p=>{
-      location.href = "/user/info";
+      headers: {"Content-Type":"application/x-www-form-urlencoded"},
+      credentials: "include",
+      body: "account="+acc+"&pass="+pass
+    }).then(r=>r.text())
+    .then(rs=>{
+      if(rs=="false"){
+        alert("Sai tài khoản hoặc mật khẩu.");
+      }else if(rs=="true"){
+        location.href = "/user/info";
+      }
     });
   }
 }
